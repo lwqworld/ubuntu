@@ -1,0 +1,3 @@
+/root/projects/Cpp_pj/optest/CMakeFiles/rebuild_cache.dir
+/root/projects/Cpp_pj/optest/CMakeFiles/optest.dir
+/root/projects/Cpp_pj/optest/CMakeFiles/edit_cache.dir
