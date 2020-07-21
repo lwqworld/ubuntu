@@ -1,0 +1,7 @@
+{
+    "terminal.integrated.confirmOnExit": true,
+    "files.associations": {
+        "iostream": "cpp",
+        "ostream": "cpp"
+    }
+}
