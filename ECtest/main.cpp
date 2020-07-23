@@ -3,7 +3,7 @@
  * @Github: https://github.com/lwqworld
  * @Date: 2020-07-17 09:59:50
  * @LastEditors: Beihuang
- * @LastEditTime: 2020-07-22 12:03:13
+ * @LastEditTime: 2020-07-22 12:35:41
  * @FilePath: /Cpp_pj/ECtest/main.cpp
  */
 
@@ -45,7 +45,7 @@ struct Person
 {
 	string m_name;
 	int m_age;
-	int m_sex;//1:man 0:woman
+	int m_sex; //1:man 0:woman
 	string m_phone;
 	string m_Addr;
 };
@@ -54,24 +54,35 @@ struct Addressbooks
 {
 	Person personArray[MAX];
 	int m_size;
-
 };
 
-void addPersion(Addressbooks *p){
-	if(p->m_size<=MAX){
+void addPersion(Addressbooks *p)
+{
+	if (p->m_size <= MAX)
+	{
 		//name
 		string name;
-		cout<<"Enter your name"<<endl;
-		cin>>name;
-		p->personArray[p->m_size].m_name=name;
+		cout << "Enter your name" << endl;
+		cin >> name;
+		p->personArray[p->m_size].m_name = name;
 		//sex
-		cout<<"Enter your sex"<< endl;
-		cout<<"    1:man    0:woman "<<endl;
-		
+		cout << "Enter your sex" << endl;
+		cout << "    1:man    0:woman " << endl;
+		int sex = 0;
+		while (true)
+		{
+			cin >> sex;
+
+			if (  sex == 1||sex==0)
+			{
+				p->personArray[p->m_size].m_sex = sex;
+			}
+		}
 	}
-	else{
-		
-		cout<<"通讯录已满，无法添加！"<<endl;
+	else
+	{
+
+		cout << "通讯录已满，无法添加！" << endl;
 		return;
 	}
 }
@@ -81,7 +92,7 @@ int main()
 	//add
 	Addressbooks lwq;
 	//Init
-	lwq.m_size=0;
+	lwq.m_size = 0;
 
 	int select = 0;
 	cin >> select;
@@ -92,7 +103,7 @@ int main()
 		return 0;
 		break;
 	case 1:
-	
+
 		break;
 	case 2:
 		break;
